@@ -1,0 +1,315 @@
+.poster {
+    height: 640px;
+    background-image: url('../../images/kong_skull_island.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+
+}
+
+.poster::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(7, 15, 25, 0.75);
+}
+
+.poster h1 {
+    color: var(--whiteColor);
+    font-family: var(--mon);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 78px;
+    position: relative;
+}
+
+.poster p {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    color: rgb(200, 200, 200);
+    font-family: var(--mon);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: justify;
+    position: relative;
+    max-width: 570px;
+
+}
+
+.poster__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.poster__btnsGroup {
+    display: flex;
+    z-index: 1;
+    gap: 30px;
+}
+
+.films {
+    padding: 60px 0;
+}
+
+.films__items {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.films__items-card {
+    display: flex;
+    max-width: max-content;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+
+}
+
+.films__items-card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    background: linear-gradient(180.00deg, rgba(241, 129, 40, 0.35), rgba(0, 0, 0, 0.71) 51.042%, rgba(7, 15, 25, 0.8) 100%);
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+}
+
+.films__items-card img {
+    transition: .5s;
+
+}
+
+.films__items-card:hover img {
+    transform: scale(1.1);
+}
+
+.films__items-card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.stroke {
+    transition: .5s;
+}
+
+.play {
+    transition: .5s;
+}
+
+.films__items-card:hover .stroke {
+    opacity: 0;
+
+}
+
+.films__items-card:hover .play {
+    transform: scale(1.3);
+    transform-origin: center;
+}
+
+.films__items-card-content-time {
+    color: var(--whiteColor);
+    font-family: var(--mon);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 9px;
+    background: rgba(7, 15, 25, 0.2);
+    padding: 7px 28px;
+    margin-top: 12px;
+    margin-bottom: 30px;
+}
+
+.films__items-card-content-title {
+    color: var(--whiteColor);
+    font-family: var(--mon);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 27px;
+    margin-bottom: 12px;
+}
+
+.films__items-card-content-descr {
+    color: var(--whiteColor);
+    font-family: var(--rob);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    max-width: 226px;
+    width: 100%;
+    transition: .5s;
+    transform: scaleY(0);
+    max-height: 0;
+}
+
+.films__items-card:hover .films__items-card-content-descr {
+    transform: scaleY(1);
+    transform-origin: center;
+    max-height: 226px;
+
+}
+
+@keyframes appearance {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.colon {
+    animation-name: appearance;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition: .5s;
+}
+
+.trailer {
+    padding-top: 42px;
+    padding-bottom: 80px;
+    background: linear-gradient(90.00deg, rgb(222, 247, 255), rgb(244, 252, 255) 45.639%, rgba(255, 255, 255, 0) 100.721%);
+    position: relative;
+}
+
+.trailer__descr {
+    color: rgb(0, 0, 0);
+    font-family: var(--rob);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: justify;
+    max-width: 558px;
+    margin-top: 51px;
+    margin-bottom: 55px;
+}
+
+.trailer__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+}
+
+.collections {
+    padding: 60px 0;
+
+}
+
+.collections__cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 63px;
+}
+
+.collections__cards-item {
+    position: relative;
+    max-width: max-content;
+    border-radius: 6px;
+}
+
+.collections__cards-item img {
+    border-radius: 6px;
+
+}
+
+.collections__cards-item::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 6px;
+    background: linear-gradient(270.00deg, rgba(7, 15, 25, 0.56), rgba(49, 114, 9, 0.56) 100%);
+}
+
+.collections__cards-item-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 7px;
+}
+
+.collections__cards-item-square {
+    border-radius: 2px;
+    background: var(--primaryColor);
+    width: 19px;
+    height: 24px;
+    position: relative;
+
+}
+
+.collections__cards-item-square::before {
+    content: '';
+    border-radius: 2px;
+    background: var(--primaryColor);
+    width: 19px;
+    height: 24px;
+    position: absolute;
+    right: -317px;
+}
+
+.collections__cards-item-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.collections__cards-item-title {
+    color: var(--whiteColor);
+    font-family: var(--com);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+}
+.collections__cards-item:hover .stroke {
+    opacity: 0;
+
+}
+
+.collections__cards-item:hover .play {
+    transform: scale(1.3);
+    transform-origin: center;
+}
